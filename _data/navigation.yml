@@ -1,0 +1,31 @@
+# main links links
+main:
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Patents"
+    url: /patents/
+
+  - title: "Talks"
+    url: /talks/      
+
+  - title: "Awards"
+    url: /awards/
+
+  - title: "Services"
+    url: /services/
+
+  - title: "Teaching"
+    url: /teaching/  
+
+  - title: "Softwares"
+    url: /softwares/
+
+  # - title: "Portfolio"
+  #   url: /portfolio/
+        
+  # - title: "Blog Posts"
+  #   url: /year-archive/
+    
+  # - title: "Guide"
+  #   url: /markdown/
