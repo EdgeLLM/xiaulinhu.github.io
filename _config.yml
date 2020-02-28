@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Lu Lu"
+title                    : "Xiaolin Hu"
 title_separator          : "-"
-name                     : &name "Lu Lu"
-description              : &description "Ph.D. candidate, Division of Applied Mathematics, Brown University"
-url                      : https://lululxvi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Xiaolin Hu"
+description              : &description "Master, School of Communication and Information Engineering, Shanghai University"
+url                      : https://xiaulinhu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "lululxvi/lululxvi.github.io"
+repository               : "xiaulinhu/xiaulinhu.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,10 +80,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Lu Lu 陆路"
-  avatar           : "lulu.jpg"
-  bio              : "Ph.D. candidate, Division of Applied Mathematics, Brown University"
-  location         : "Providence, Rhode Island"
+  name             : "Xiaolin Hu 胡啸林"
+  avatar           : "xiaolin.jpg"
+  bio              : "Master, School of Communication and Information Engineering, Shanghai University"
+  location         : "Shanghai"
   employer         :
   googlescholar    : "https://scholar.google.com/citations?user=wD_wsWUAAAAJ&hl=en"
   email            : "lu_lu_1@brown.edu"
@@ -95,13 +95,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "lululxvi"
+  github           : "xiaulinhu"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/0000-0002-5476-5768"
+  orcid            : # "http://orcid.org/0000-0002-5476-5768"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "6185009/lulu66"
@@ -306,3 +306,5 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+github: [metadata]
