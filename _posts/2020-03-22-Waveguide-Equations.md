@@ -8,6 +8,8 @@ tags:
   - Buris 
 ---
 
+This blog contains the second order equations of waveguide problem and the corresponding equations used in deep learning methods.
+
 # Solving Ractangular Waveguide Problem using Deep Learning
 ## 1. $TE_{mn}$ modes in Rctangular Waveguide
 

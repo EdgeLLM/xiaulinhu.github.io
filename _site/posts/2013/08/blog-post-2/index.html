@@ -453,9 +453,95 @@
         
 
     
-    <p class="archive__item-excerpt" itemprop="description"><h1 id="solving-ractangular-waveguide-problem-using-deep-learning">Solving Ractangular Waveguide Problem using Deep Learning</h1>
-<h2 id="1-te_mn-modes-in-rctangular-waveguide">1. $TE_{mn}$ modes in Rctangular Waveguide</h2>
+    <p class="archive__item-excerpt" itemprop="description"><p>This blog contains the second order equations of waveguide problem and the corresponding equations used in deep learning methods.</p>
 
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://xiaulinhu.github.io/posts/2019/10/Jupyter-Remote/" rel="permalink">Running a Jupyter notebook from a ubuntu remote server
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2019-10-16T00:00:00-07:00">October 16, 2019</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><h1 id="running-a-jupyter-notebook-from-a-ubuntu-remote-server"><a href="https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/">Running a Jupyter notebook from a ubuntu remote server</a></h1>
+
+<p><strong>Set-up:</strong> Here, let’s define the local user and host as <code class="language-plaintext highlighter-rouge">localuser</code> and <code class="language-plaintext highlighter-rouge">localhost</code> respectively. Similarly, let’s define the remote user and remote host as <code class="language-plaintext highlighter-rouge">remoteuser</code> and <code class="language-plaintext highlighter-rouge">remotehost</code>. Needless to say, make sure that <a href="http://jupyter.readthedocs.io/en/latest/install.html">Jupyter notebook and all its dependencies</a> are installed in both machines. Here’s a quick diagram of the whole process, I will discuss them one-by-one in the next section:</p>
+
+<p><img src="https://ljvmiranda921.github.io/assets/png/tuts/jupyternotebook.png" alt="overview" /></p>
+
+<ol>
+  <li>
+    <p>Run Jupyter Notebook from remote machine</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xiaolin@imimo:jupyter notebook --no-browser --port=XXXX
+   
+# Note: Change XXXX to the port of your choice. Usually, the default is 8888. 
+# You can try 8889 or 8890 as well.
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Forward port XXXX to YYYY and listen to it</p>
+
+    <p>In your remote, the notebook is now running at the port <code class="language-plaintext highlighter-rouge">XXXX</code> that you specified. What you’ll do next is forward this to port <code class="language-plaintext highlighter-rouge">YYYY</code> <em>of your machine</em> so that you can listen and run it from your browser. To achieve this, we write the following command:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\XiaolinHu&gt;ssh -N -f -L localhost:YYYY:localhost:XXXX xiaolin@imimo
+</code></pre></div>    </div>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">ssh</code>: your handy ssh command. See <a href="https://man.openbsd.org/ssh">man page</a> for more info</li>
+      <li><code class="language-plaintext highlighter-rouge">-N</code>: suppresses the execution of a remote command. Pretty much used in port forwarding.</li>
+      <li><code class="language-plaintext highlighter-rouge">-f</code>: this requests the <code class="language-plaintext highlighter-rouge">ssh</code> command to go to background before execution.</li>
+      <li><code class="language-plaintext highlighter-rouge">-L</code>: this argument requires an input in the form of <code class="language-plaintext highlighter-rouge">local_socket:remote_socket</code>. Here, we’re specifying our port as <code class="language-plaintext highlighter-rouge">YYYY</code> which will be binded to the port <code class="language-plaintext highlighter-rouge">XXXX</code> from your remote connection.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Fire-up Jupyter Notebook</p>
+
+    <p>To open up the Jupyter notebook from your remote machine, simply start your browser and type the following in your address bar:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>localhost:YYYY
+</code></pre></div>    </div>
+
+    <p>Again, the reason why we’re opening it at <code class="language-plaintext highlighter-rouge">YYYY</code> and not at <code class="language-plaintext highlighter-rouge">XXXX</code> is because the latter is already being forwarded to the former. <code class="language-plaintext highlighter-rouge">XXXX</code> and <code class="language-plaintext highlighter-rouge">YYYY</code> can be the “same” number (not the same port, technically) because they are from different machines.</p>
+
+    <p>If you’re successful, you should see the typical Jupyter Notebook home screen in the directory where you ran the command in Step 1. At the same time, if you look in your remote terminal, you should see some log actions happening as you perform some tasks.</p>
+
+    <p>In your first connection, you may be prompted to enter an Access Token as typical to most Jupyter notebooks. Normally, I’d just copy-paste it from my terminal, but to make things easier for you, you can <a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#automatic-password-setup">set-up your own notebook password</a>.</p>
+  </li>
+</ol>
 </p>
     
     
@@ -494,49 +580,6 @@
 
         
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2015-08-14T00:00:00-07:00">August 14, 2015</time></p>
-        
-
-    
-    <p class="archive__item-excerpt" itemprop="description"><p>This is a sample blog post. Lorem ipsum I can’t remember the rest of lorem ipsum and don’t have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.</p>
-
-</p>
-    
-    
-    
-
-  </article>
-</div>
-
-        
-          
-
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="https://xiaulinhu.github.io/posts/2014/08/blog-post-3/" rel="permalink">Blog Post number 3
-</a>
-      
-    </h2>
-    
-    
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-  
-	  less than 1 minute read
-	
-</p>
-    
-
-        
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2014-08-14T00:00:00-07:00">August 14, 2014</time></p>
         
 
     
