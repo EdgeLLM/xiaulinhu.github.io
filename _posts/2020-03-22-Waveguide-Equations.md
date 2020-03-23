@@ -56,12 +56,3 @@ $$
 
 ## 
 
-
-Headings are cool
-======
-
-You can have many headings
-======
-
-Aren't headings cool?
-------
