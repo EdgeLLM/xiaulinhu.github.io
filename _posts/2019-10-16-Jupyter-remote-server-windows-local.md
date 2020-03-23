@@ -10,7 +10,8 @@ tags:
 
 This is a guide on how to connect Jupyter notebook from ubuntu remote server at local side. The system of local machine is windows10. The original blog is [here](https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/).
 
-# Running Jupyter Notebook Remotely
+Running Jupyter Notebook Remotely
+======
 
 **Set-up:** Here, let’s define the local user and host as `localuser` and `localhost` respectively. Similarly, let’s define the remote user and remote host as `remoteuser` and `remotehost`. Needless to say, make sure that [Jupyter notebook and all its dependencies](http://jupyter.readthedocs.io/en/latest/install.html) are installed in both machines. Here’s a quick diagram of the whole process, I will discuss them one-by-one in the next section:
 
